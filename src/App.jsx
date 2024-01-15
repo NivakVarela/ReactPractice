@@ -1,16 +1,17 @@
 import './App.css'
 import Card from './components/Card'
-
+import vehicles from './data/vehicle'
 function App() {
-  return (
+
+  const vehicleList=vehicles.map(v =>{
+  return <Card   title={v.name} description={v.description}/>
+})
+
+return (
     <div className='App'> 
     <h1>Hola react</h1>
     <div className='container'>
-
-    <Card title="titulo" description="la descripcion"/>
-    <Card/>
-    <Card/>
-    <Card/>
+    {vehicleList}
     </div>
     </div>
   )
